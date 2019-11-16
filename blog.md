@@ -16,6 +16,7 @@ permalink: /blog/
     <a name="{{ category_name | slugize }}"></a>
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
+      ![_config.yml]({{ site.baseurl }}/images/config.png)
       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
     </article>
     {% endfor %}
