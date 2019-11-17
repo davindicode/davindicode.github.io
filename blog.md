@@ -11,12 +11,11 @@ permalink: /blog/
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
-
     <h3 class="category-head">{{ category_name }}</h3>
     <a name="{{ category_name | slugize }}"></a>
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
-      ![alt text]({{ site.baseurl }}/images/gyro.jpg)
+      ![_config.yml]({{ site.baseurl }}/images/gyro.jpg)
       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
     </article>
     {% endfor %}
