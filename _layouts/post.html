@@ -26,6 +26,10 @@ MathJax.Hub.Config({
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
-
-  {% include disqus.html %}
+  
+  
+  {% if page.comments == true %}
+    {% include disqus.html %}
+  {% endif %}
+  
 </article>
