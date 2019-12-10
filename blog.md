@@ -15,8 +15,10 @@ permalink: /blog/
     <a name="{{ category_name | slugize }}"></a>
     {% for post in site.categories[category_name] %}
     <article class="archive-item">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-      <img border="0" alt="W3Schools" src="{{ site.baseurl }}/images/gyro.jpg" width="100" height="100">
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}
+      <img style="width:90%; height:90%; margin-left:5%; margin-top:5%; margin-bottom:5%;" src="{{ site.baseurl }}/images/gyro.jpg">
+      <h3 style="margin-top:4px; font-size:95%;">Gyroscopes</h3>
+      </a>
     </article>
     {% endfor %}
   </div>
