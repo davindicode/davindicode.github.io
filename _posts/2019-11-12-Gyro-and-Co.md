@@ -2,6 +2,7 @@
 layout: post
 title: Gyroscopes
 comments: true
+thumbnail: gyro.jpg
 categories: Physics
 ---
 
