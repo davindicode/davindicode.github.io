@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gyroscopes
+comments: true
 categories: Physics
 ---
 
