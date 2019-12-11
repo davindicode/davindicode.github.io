@@ -18,6 +18,7 @@ MathJax.Hub.Config({
 
 <article class="post">
   <h1>{{ page.title }}</h1>
+  <h4>{{ page.categories | capitalize | join: ', ' }}</h4>
 
   <div class="entry">
     {{ content }}
