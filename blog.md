@@ -18,7 +18,7 @@ permalink: /blog/
       <a href="{{ site.baseurl }}{{ post.url }}">
         <div class="post">
           <h3 style="margin-top:4px; font-size:95%;">{{ post.title }}</h3>
-          <img style="width:90%; height:90%; margin-left:5%; margin-top:5%; margin-bottom:5%;" src="{{ site.baseurl }}/images/gyro.jpg">
+          <img style="width:90%; height:90%; margin-left:5%; margin-top:5%; margin-bottom:5%;" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}">
         </div>
       </a>
     </article>
