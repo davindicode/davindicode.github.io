@@ -17,7 +17,7 @@ permalink: /blog/
       <div class="row">
         <div class="column">
           <div class="post">
-            <h3 style="margin-top:4px; horizontal-align: middle; font-size:95%;">{{ post.title }}</h3>
+            <h3 style="margin-top:4px; text-align: center; font-size:95%;">{{ post.title }}</h3>
             <a href="{{ site.baseurl }}{{ post.url }}">
               <img style="width:95%; height:95%;" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}">
             </a>
