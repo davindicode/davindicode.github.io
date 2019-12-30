@@ -11,20 +11,16 @@ permalink: /blog/
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
     <h3 class="category-head">{{ category_name }}</h3>
-    <div class="gallery"></div>
-      {% for post in site.categories[category_name] %}
+    {% for post in site.categories[category_name] %}
       <article class="archive-item">
         <div class="post">
-          <figure class=”gallery_item">
-            <h3 style="margin-top:4px; text-align:center; font-size:95%;">{{ post.title }}</h3>
-            <a href="{{ site.baseurl }}{{ post.url }}">
-              <img style="width:33%; height:33%;" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}">
-            </a>
-          </figure>
+          <h3 style="margin-top:4px; text-align:center; font-size:95%;">{{ post.title }}</h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img style="width:33%; height:33%;" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}">
+          </a>
         </div>
       </article>
-      {% endfor %}
-    </div>                                                                                                            
+    {% endfor %}                                                                                                         
   </div>
 {% endfor %}
 </div>
