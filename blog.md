@@ -12,14 +12,22 @@ permalink: /blog/
     <p></p>
     <h3 class="category-head">{{ category_name }}</h3>
     {% for post in site.categories[category_name] %}
-      <article class="archive-item">
-        <div class="post">
-          <h3 style="margin-top:4px; text-align:center; font-size:95%;">{{ post.title }}</h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <img style="width:33%; height:33%;" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}">
-          </a>
-        </div>
-      </article>
+    {% if forloop.counter0 == 3 or forloop.counter0 == 6 %}
+    <div class="row">
+    {% endif %}
+      <div class="column">
+        <article class="archive-item">
+          <div class="post">
+            <h3 style="margin-top:4px; text-align:center; font-size:95%;">{{ post.title }}</h3>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              <img style="width:33%; height:33%;" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}">
+            </a>
+          </div>
+        </article>
+      </div>
+    {% if forloop.counter0 == 3 or forloop.counter0 == 6 %}
+    <div>
+    {% endif %}
     {% endfor %}                                                                                                         
   </div>
 {% endfor %}
