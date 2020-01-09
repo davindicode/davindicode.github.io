@@ -12,7 +12,7 @@ permalink: /blog/
     <p></p>
     <h3 class="category-head">{{ category_name }}</h3>
     {% for post in site.categories[category_name] %}
-    {% if forloop.counter0 == 3 or forloop.counter0 == 6 %}
+    {% if forloop.counter0 == 0 or forloop.counter0 == 3 %}
     <div class="row">
     {% endif %}
       <div class="column">
