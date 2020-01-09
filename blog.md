@@ -12,9 +12,7 @@ permalink: /blog/
     <p></p>
     <h3 class="category-head">{{ category_name }}</h3>
     {% for post in site.categories[category_name] %}
-    <!{% if forloop.counter0 == 0 or forloop.counter0 == 3 %}!>
     <div class="row">
-    <!{% endif %}>
       <div class="column">
         <article class="archive-item">
           <div class="post">
@@ -25,10 +23,10 @@ permalink: /blog/
           </div>
         </article>
       </div>
-    <!{% if forloop.counter0 == 0 or forloop.counter0 == 3 %}>
     <div>
-    <!{% endif %}>
     {% endfor %}                                                                                                         
   </div>
 {% endfor %}
 </div>
+<!{% if forloop.counter0 == 0 or forloop.counter0 == 3 %}!><!{% endif %}>
+    <!{% if forloop.counter0 == 0 or forloop.counter0 == 3 %}><!{% endif %}>
