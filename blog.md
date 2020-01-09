@@ -25,7 +25,7 @@ permalink: /blog/
           </div>
         </article>
       </div>
-    {% if forloop.counter0 == 3 or forloop.counter0 == 6 %}
+    {% if forloop.counter0 == 0 or forloop.counter0 == 3 %}
     <div>
     {% endif %}
     {% endfor %}                                                                                                         
