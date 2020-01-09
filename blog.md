@@ -11,8 +11,8 @@ permalink: /blog/
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
     <h3 class="category-head">{{ category_name }}</h3>
-    {%- for post in site.categories[category_name] -%}
     <div class="row">
+    {%- for post in site.categories[category_name] -%}
       <div class="column">
         <article class="archive-item">
           <div class="post">
@@ -23,8 +23,8 @@ permalink: /blog/
           </div>
         </article>
       </div>
+    {%- endfor -%}
     <div>
-    {%- endfor -%}                                                                                                         
   </div>
 {%- endfor -%}
 </div>
