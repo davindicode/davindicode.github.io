@@ -1,78 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
-  
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+---
+layout: base
+---
 
-    {% include meta.html %}
+<article class="archive">
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-dark-grey" onclick="openCat(event, 'All')">All</button>
+    {%- for category in site.categories -%}
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <button class="w3-bar-item w3-button tablink" onclick="openCat(event, '{{ category_name }}')">{{ category_name }}</button>
+    {%- endfor -%}
+  </div>
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-
-    <style>
-      img {
-        border: 1px solid #999;
-        border-radius: 4px;
-        padding: 5px;
-        width: 150px;
+  <script>
+    function openCat(evt, category) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("category");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
       }
-      img:hover {
-        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
       }
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
-      }
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-    </style>
-    
-  </head>
+      document.getElementById(category).style.display = "block";
+      evt.currentTarget.className += " w3-dark-grey"; 
+    }
+  </script>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+  {{ content }}
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/blog">Blog</a>
-            <a href="{{ site.baseurl }}/projects">Projects</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-            <a href="{{ site.baseurl }}/contact">Contact</a>
-          </nav>
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
-  </body>
-</html>
+</article>

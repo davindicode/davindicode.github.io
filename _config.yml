@@ -6,10 +6,10 @@
 name: The Davindi Code
 
 # Short bio or description (displayed in the header)
-description:
+description: 
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar:
+avatar: https://davindicode.github.io/favicon.png
 
 #
 # Flags below are optional
@@ -18,12 +18,12 @@ avatar:
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: Davindi09@gmail.com
   facebook:
   flickr:
-  github:
+  github: davindicode
   instagram:
-  linkedin:
+  linkedin: david-liu-143b8410b
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:

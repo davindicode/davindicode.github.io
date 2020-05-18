@@ -4,30 +4,35 @@ title: Blog
 permalink: /blog/
 ---
 
-<div id="archives">
+<div id="All" class="w3-container category w3-animate-left">
+  <div id="#{{ category_name | slugize }}"></div>
+  {%- for post in site.posts -%}
+    <div class="column">
+      <div class="thumbnail" style="border: 1px solid black">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <img style="width:95%; height:95%" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
+        </a>
+        <h3 style="margin-top:1px; margin-bottom:1px; text-align:center; font-size:95%;">{{ post.title }}</h3>
+        <p style="margin-top:1px; font-size:12px;">{{ post.title }}</p>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
 {%- for category in site.categories -%}
-  <div class="archive-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
+{% capture category_name %}{{ category | first }}{% endcapture %}
+  <div id="{{ category_name }}" class="w3-container category w3-animate-left" style="display:none">
     <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-    <h3 class="category-head">{{ category_name }}</h3>
-    <div class="row">
     {%- for post in site.categories[category_name] -%}
       <div class="column">
-        <article class="archive-item">
-          <div class="post">
-            <!<h3 style="margin-top:4px; text-align:center; font-size:95%;">{{ post.title }}</h3>>
-            <a href="{{ site.baseurl }}{{ post.url }}">
-              <img style="width:100%; height:100%;" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}">
-              <div class="caption"; text-align:center;>{{ post.title }}</div>
-            </a>
-          </div>
-        </article>
+        <div class="thumbnail" style="border: 1px solid black">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img style="width:95%; height:95%" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
+          </a>
+          <h3 style="margin-top:1px; margin-bottom:1px; text-align:center; font-size:95%;">{{ post.title }}</h3>
+          <p style="margin-top:1px; font-size:12px;">{{ post.title }}</p>
+        </div>
       </div>
     {%- endfor -%}
-    <div>
   </div>
 {%- endfor -%}
-</div>
-<!{% if forloop.counter0 == 0 or forloop.counter0 == 3 %}!><!{% endif %}>
-    <!{% if forloop.counter0 == 0 or forloop.counter0 == 3 %}><!{% endif %}>
