@@ -329,7 +329,8 @@ footer {
     border: 1px solid #999;
     border-radius: 4px;
     padding: 5px;
-    width: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   img:hover {
@@ -340,7 +341,8 @@ footer {
 .column {
   float: left;
   width: 33.33%;
-  padding: 5px;
+  height: 300px;
+  padding: 10px;
 }
 
 .row::after {

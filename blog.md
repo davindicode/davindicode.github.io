@@ -8,12 +8,11 @@ permalink: /blog/
   <div id="#{{ category_name | slugize }}"></div>
   {%- for post in site.posts -%}
     <div class="column">
-      <div class="thumbnail" style="border: 1px solid black">
+      <div class="thumbnail">
         <a href="{{ site.baseurl }}{{ post.url }}">
-          <img style="width:95%; height:95%" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
+          <img src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
         </a>
-        <h3 style="margin-top:1px; margin-bottom:1px; text-align:center; font-size:95%;">{{ post.title }}</h3>
-        <p style="margin-top:1px; font-size:12px;">{{ post.title }}</p>
+        <h4 style="margin-top:0px; margin-bottom:0px; text-align:center; font-size:80%;">{{ post.title }}</h4>
       </div>
     </div>
   {%- endfor -%}
@@ -25,12 +24,11 @@ permalink: /blog/
     <div id="#{{ category_name | slugize }}"></div>
     {%- for post in site.categories[category_name] -%}
       <div class="column">
-        <div class="thumbnail" style="border: 1px solid black">
+        <div class="thumbnail">
           <a href="{{ site.baseurl }}{{ post.url }}">
-            <img style="width:95%; height:95%" src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
+            <img src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
           </a>
-          <h3 style="margin-top:1px; margin-bottom:1px; text-align:center; font-size:95%;">{{ post.title }}</h3>
-          <p style="margin-top:1px; font-size:12px;">{{ post.title }}</p>
+          <h4 style="margin-top:0px; margin-bottom:0px; text-align:center; font-size:80%;">{{ post.title }}</h4>
         </div>
       </div>
     {%- endfor -%}
