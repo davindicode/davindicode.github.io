@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Statistical fields
+title: Bayesian Bessel
 comments: true
 thumbnail: gyro.jpg
 categories: [Machine learning]
