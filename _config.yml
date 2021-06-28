@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: The Davindi Code
+name: David Liu
 
 # Short bio or description (displayed in the header)
 description: 
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://davindicode.github.io/favicon.png
+avatar: /images/profile.jpg
 
 #
 # Flags below are optional
@@ -30,6 +30,7 @@ footer-links:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
+  googlescholar: # user=?
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts

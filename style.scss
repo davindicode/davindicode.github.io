@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 16px/1.4 $helvetica;
   color: $darkGray;
 }
 
@@ -157,6 +157,7 @@ img {
 //
 
 .wrapper-masthead {
+  margin-top: 20px;
   margin-bottom: 20px;
 
   ul {
@@ -189,7 +190,7 @@ img {
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: 0px 0;
   border-bottom: 5px solid $lightGray;
   @include mobile {
     text-align: center;
@@ -228,9 +229,9 @@ img {
   color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 32px;
+  letter-spacing: 0px;
 }
 
 .site-description {
@@ -269,6 +270,31 @@ nav {
     }
   }
 }
+
+
+a:link {
+  color: rgb(37, 142, 207);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+//a:visited {
+//  color: pink;
+//  background-color: transparent;
+//  text-decoration: none;
+//}
+
+a:hover {
+  color: rgb(0, 46, 173);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+//a:active {
+//  color: yellow;
+//  background-color: transparent;
+//  text-decoration: underline;
+//}
 
 //
 // .main
@@ -312,11 +338,14 @@ nav {
 }
 
 footer {
-  padding: 50px 0;
+  padding: 20px 0;
   clear: both;
 
   .alignleft {
     float: left;
+  }
+  .aligncenter {
+    text-align: center;
   }
   .alignright {
     float: right;
