@@ -6,7 +6,7 @@ permalink: /other/
 
 
 ### Cambridge University Artificial Intelligence society ###
-I help running <a href="http://cuai.org.uk/" class="open-source">CuAI</a> as executive chairman.
+I help directing and running <a href="http://cuai.org.uk/" class="open-source">CuAI</a> as executive chairman.
 
 
 ### C1 Quanta ###
