@@ -10,7 +10,7 @@ permalink: /research/
 
 **A universal probabilistic spike count model reveals ongoing modulation of neural variability**  
 **D. Liu**, M. Lengyel  
-*bioRxiv, 2021 (submitted to NeurIPS)*  
+*bioRxiv, 2021 (accepted to NeurIPS)*  
 [[link](https://www.biorxiv.org/content/10.1101/2021.06.27.450063v2)]  
 
 
