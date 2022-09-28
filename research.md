@@ -1,47 +1,36 @@
 ---
-layout: page
+layout: blog
 title: Research
 permalink: /research/
 ---
 
+<div id="All" class="w3-container category w3-animate-left">
+  <div id="#{{ category_name | slugize }}"></div>
+  {%- for post in site.works -%}
+    <div class="column">
+      <div class="thumbnail">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <img src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
+        </a>
+        <h4 style="margin-top:0px; margin-bottom:0px; text-align:center; font-size:80%;">{{ post.title }}</h4>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
 
-
-### Publications ###
-
-**A universal probabilistic spike count model reveals ongoing modulation of neural variability**  
-**D. Liu**, M. Lengyel  
-*bioRxiv, 2021 (accepted to NeurIPS)*  
-[[link](https://www.biorxiv.org/content/10.1101/2021.06.27.450063v2)]  
-
-
-### Conference abstracts ###
-
-**Beyond the Euclidean brain: inferring non-Euclidean latent trajectories from spike trains**  
-K. T. Jensen, **D. Liu**, T.-C. Kao, M. Tripodi, M. Lengyel, G. Hennequin  
-*COSYNE, 2021*  
-[[abstract](/docs/Cosyne_2021.pdf)]  
-
-
-### Summer schools ###
-
-**Normalizing Flows for Approximating Probability Densities**  
-**D. Liu**, L. Ryll, V. Stimper  
-*Eastern European Machine Learning Summer School, 2020*  
-[[extended abstract](/docs/EE_2020.pdf)]  
-
-
-### Reports and theses ###
-**Signal propagation in systems of hydrodynamically coupled active oscillators**  
-Supervisor: Prof Pietro Cicuta  
-*Master thesis for Part III Physics (BSS, University of Cambridge), 2019*  
-[[pdf](/docs/Master_thesis.pdf)]  
-
-**Langevin equation for charged granular gases**  
-Supervisor: Dr Marco G. Mazza  
-*Ludwig Prandtl summer internship (MPIDS G&ouml;ttingen), 2018*  
-[[pdf](/docs/Ludwig_Prandtl.pdf)]
-
-**The effects of hand dominance on short-term motor learning of arm movements**  
-Jointly with Joris Teunissen, supervisor: dr. Thomas J. Hulst (writing was done in Dutch)  
-*Junior Med School (Frens Lab, Erasmus MC Rotterdam), 2014*  
-[[pdf](/docs/JMS_2014.pdf)]
+{%- for category in site.categories -%}
+{% capture category_name %}{{ category | first }}{% endcapture %}
+  <div id="{{ category_name }}" class="w3-container category w3-animate-left" style="display:none">
+    <div id="#{{ category_name | slugize }}"></div>
+    {%- for post in site.categories[category_name] -%}
+      <div class="column">
+        <div class="thumbnail">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{ site.baseurl }}/images/thumbnail/research/{{ post.thumbnail }}" class="center">
+          </a>
+          <h4 style="margin-top:0px; margin-bottom:0px; text-align:center; font-size:80%;">{{ post.title }}</h4>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+{%- endfor -%}

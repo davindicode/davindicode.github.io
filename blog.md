@@ -26,7 +26,7 @@ permalink: /blog/
       <div class="column">
         <div class="thumbnail">
           <a href="{{ site.baseurl }}{{ post.url }}">
-            <img src="{{ site.baseurl }}/images/thumbnail/{{ post.thumbnail }}" class="center">
+            <img src="{{ site.baseurl }}/images/thumbnail/blog/{{ post.thumbnail }}" class="center">
           </a>
           <h4 style="margin-top:0px; margin-bottom:0px; text-align:center; font-size:80%;">{{ post.title }}</h4>
         </div>
