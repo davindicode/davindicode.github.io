@@ -4,6 +4,7 @@ title: Bayesian Bessel
 comments: true
 thumbnail: bayes_bessel.jpg
 categories: [Machine learning]
+type: blog
 ---
 
 If you have ever gone through a basic statistics course or textbook, you are probably familiar with the concept of calculating the sample standard deviation in order to calculate the uncertainty in the sample mean. Whether you are crunching through balance sheets or reviewing freshly made measurements from the lab, this basic measure is used all over the place. There is however one peculiar aspect of the standard prescription: we need to divide by $N-1$ rather than $N$ as in the usual definition of variance, $N$ being the number of data points. This small and seemingly insignificant adjustment is known as *Bessel's correction*. Newcomers in statistics may be surprised to find out that this correction has a very simple mathematical derivation (at least I was). It is not just some empirical adjustment to account for the finite sample size, as often advertised. Even more, we can derive the same result from a Bayesian perspective using an approximation framework common in machine learning called *mean-field inference*.
